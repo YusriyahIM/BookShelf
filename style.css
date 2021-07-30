@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  /*------- Colors -------*/
+  --first-color-alt: #8f4f81;
+  --text-color: #ffffff;
+  --body-color: #e921d8;
+  --head-color: #e921d8;
+  --button-red: rgb(197, 10, 4);
+  --button-yellow: rgb(201, 201, 16);
+  --button-green: rgb(22, 201, 16);
+  --button-color: #e921d8;
+}
+.body-dark {
+  --head-color: #161212;
+  --body-color: rgb(228, 228, 228);
+  --button-color: #161212;
+  background: rgb(46, 44, 44);
+}
+
+.head_bar-dark {
+  background-color: var(--head-color);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--head-color);
+  color: var(--text-color);
+  top: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.title_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+  color: var(--body-color);
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px;
+  display: block;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid var(--body-color);
+  border-radius: 10px;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: var(--body-color);
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+button {
+  background-color: var(--button-color);
+}
+
+.input_section > form > button {
+  color: var(--text-color);
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input_section > form > .input > label {
+  color: var(--body-color);
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: var(--body-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--body-color);
+  border-radius: 10px;
+}
+
+.search_section > h2 {
+  color: var(--body-color);
+}
+
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: flex;
+  align-items: center;
+  color: var(--body-color);
+  font-weight: bold;
+}
+
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button {
+  color: var(--text-color);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  border: 1px solid var(--body-color);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.book_shelf > h2 {
+  color: var(--body-color);
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid var(--body-color);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+  color: var(--body-color);
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: var(--button-green);
+  color: var(--text-color);
+}
+
+.book_shelf > .book_list > .book_item > .action > .yellow {
+  background-color: var(--button-yellow);
+  color: var(--text-color);
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: var(--button-red);
+  color: var(--text-color);
+}
+
+.error {
+  border: 2px solid red;
+}
+
+small {
+  color: red;
+}
+
+.error-display {
+  display: none;
+}
+
+/* -------------TOGGLE-------------  */
+#toggle_checkbox {
+  display: none;
+}
+
+.toggle {
+  /* display: block;
+  position: static; */
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 78px;
+  height: 43px;
+  margin: 7px 37px;
+  background-color: var(--first-color-alt);
+  border-radius: 56px;
+  transform: translateY(0%);
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+  overflow: hidden;
+}
+
+#star {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 11px;
+  height: 15px;
+  background-color: #fff;
+  transform: scale(1);
+  border-radius: 50%;
+  transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+  z-index: 1;
+}
+
+#star-1 {
+  position: relative;
+}
+
+#star-2 {
+  position: absolute;
+  transform: rotateZ(36deg);
+}
+
+.star {
+  top: 0;
+  left: -7px;
+  font-size: 38px;
+  line-height: 15px;
+  color: #fff;
+  transition: 5.3s ease color;
+}
+
+#moon {
+  position: absolute;
+  bottom: -52px;
+  right: 7px;
+  width: 35px;
+  height: 27px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease bottom;
+}
+
+#moon:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -20px;
+  width: 39px;
+  height: 39px;
+  background-color: var(--first-color-alt);
+  border-radius: 22%;
+  transition: 0.3s ease background-color;
+}
+
+#toggle_checkbox:checked + label {
+  background-color: rgb(46, 44, 44);
+}
+
+#toggle_checkbox:checked + label #star {
+  top: 5px;
+  left: 41px;
+  transform: scale(0.3);
+  background-color: yellow;
+}
+
+#toggle_checkbox:checked + label .star {
+  color: yellow;
+}
+
+#toggle_checkbox:checked + label #moon {
+  bottom: 8px;
+}
+
+#toggle_checkbox:checked + label #moon:before {
+  background-color: rgb(46, 44, 44);
+}

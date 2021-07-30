@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="shortcut icon" type="image/png" href="book.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title">Bookshelf Apps</h1>
+      <input type="checkbox" id="toggle_checkbox" />
+      <label for="toggle_checkbox" class="toggle">
+        <div id="star">
+          <div class="star" id="star-1">★</div>
+          <div class="star" id="star-2">★</div>
+        </div>
+        <div id="moon"></div>
+      </label>
+    </header>
+
+    <main>
+      <section class="input_section">
+        <h2 class="head_bar__title">Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input name="title" id="inputBookTitle" type="text" required />
+            <small class="error-display" id="errorTitle">Judul harus diisi</small>
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input name="author" id="inputBookAuthor" type="text" required />
+            <small class="error-display" id="errorAuthor">Penulis harus diisi</small>
+          </div>
+          <div class="input">
+            <label for="inputYear">Tahun</label>
+            <input name="year" id="inputBookYear" type="number" required />
+            <small class="error-display" id="errorYear">Tahun harus Diisi</small>
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input name="isComplete" id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="submit" id="booksubmit">Masukkan Buku</button>
+        </form>
+      </section>
+
+      <section class="search_section book_shelf" id="searchSection">
+        <h2 id="searchSectionH2">Cari Buku</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Kata Kunci</label>
+          <input id="searchBookTitle" type="text" />
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+        <div id="searchResult" class="book_list" style="width: 100%"></div>
+      </section>
+
+      <section class="book_shelf" id="bookShelfUncompleted">
+        <h2>Belum selesai dibaca</h2>
+
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </section>
+
+      <section class="book_shelf">
+        <h2 id="completedH2">Selesai dibaca</h2>
+
+        <div id="completeBookshelfList" class="book_list"></div>
+      </section>
+    </main>
+
+    <script src="js.js"></script>
+  </body>
+</html>
